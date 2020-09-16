@@ -1,5 +1,5 @@
-var db = require('../db');
 const shortid = require('shortid');
+var db = require('../db');
 
 module.exports = {
     index: function (req, res) {
@@ -18,6 +18,7 @@ module.exports = {
         })
     },
     create: function (req, res) {
+        console.log(req.cookies);
         res.render('users/create');
     },
     view: function (req, res) {
@@ -29,20 +30,7 @@ module.exports = {
     },
     postCreate: function (req, res) {
         req.body.id = shortid.generate();
-        var errors = [];
-        if(!req.body.name) {
-            errors.push('Name is required.');
-        }
-        if(!req.body.phone) {
-            errors.push('Phone is required.');
-        }
-        if(errors.length) {
-            res.render('users/create', {
-                errors: errors,
-                values: req.body
-            })
-            return;
-        }
+        req.body.avatar = req.file.path.split('\\').slice(1).join('\\');
         db.get('users').push(req.body).write();
         res.redirect('/users');
     }
