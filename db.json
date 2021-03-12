@@ -29,8 +29,8 @@
       "name": "Jane",
       "phone": "0936752046",
       "id": "4jxsW7mGh",
-      "email": "jane@gmail.com",
-      "password": "uploads\\e10adc3949ba59abbe56e057f20f883e"
+      "email": "admin",
+      "password": "e10adc3949ba59abbe56e057f20f883e"
     },
     {
       "name": "Bob",
@@ -70,6 +70,18 @@
       "phone": "0234415232",
       "id": "XiY4ZLbkv",
       "avatar": "uploads\\3122b6583365f893e236d1485c68571f"
+    },
+    {
+      "name": "12",
+      "phone": "21",
+      "id": "18fw91zBs",
+      "avatar": "uploads\\943492ffc650265206a952838d3bcac2"
+    },
+    {
+      "name": "122123",
+      "phone": "321",
+      "id": "82SbFUx7x",
+      "avatar": "uploads\\6f0e06dcdb77c8782ef5bdbfe6da95b6"
     }
   ]
 }
